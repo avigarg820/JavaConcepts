@@ -1,0 +1,42 @@
+// Learning the use of this keyword in java.
+
+class Employee {
+    private String  name; //instance var 1
+    private double salary; //instance var 2
+    
+
+// constructor
+
+    Employee(String name, double salary){
+        name= name;  //wrongful assignment local = local
+        this.salary = salary; //Correct: object's variable = instance var 2
+    }
+    
+    // let's create a method to use name of class Employee
+    
+    public String getname(){
+        return name;
+    }
+    
+    // let's creat e a method to use salary of class Employee
+    
+    public Double getSalary(){
+        return salary;
+    } 
+}
+
+
+// Main class after this ------------------------
+
+public class Main {
+    public static void main(String[] args){
+        
+        // main program starts...
+        Employee emp = new Employee("Avi Garg", 120000);
+        System.out.println (emp.getname());
+        System.out.println(emp.getSalary());
+        
+    }
+}
+
+
